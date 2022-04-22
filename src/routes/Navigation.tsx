@@ -17,9 +17,9 @@ const Navigation = () => {
                     <img src={logo} alt="logo" />
                     <ul>
                         {
-                            routes.map(({to, name, path}) => (
+                            routes.map(({to, name}) => (
                                 <li key={name}>
-                                    <NavLink to={to} className={({isActive}) => isActive ? 'nav-active': ''}>{path}</NavLink>
+                                    <NavLink to={to} className={({isActive}) => isActive ? 'nav-active': ''}>{name}</NavLink>
                                 </li>
                             ))
                         }
@@ -39,7 +39,7 @@ const Navigation = () => {
                         ))
                     }
 
-                    <Route path="/*" element={<Navigate to="/lazy1" replace/>} />
+                    <Route path="/*" element={<Navigate to="/lazyload/" replace/>} />
                 </Routes>
 
             </div>
